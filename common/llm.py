@@ -24,7 +24,8 @@ import urllib.error
 try:  # optionales Komfort-Feature: .env automatisch laden, falls vorhanden
     from dotenv import load_dotenv  # type: ignore
 
-    load_dotenv()
+    # override=True: die .env gewinnt gegen einen evtl. veralteten Shell-Key
+    load_dotenv(override=True)
 except Exception:  # python-dotenv ist nicht zwingend
     pass
 
