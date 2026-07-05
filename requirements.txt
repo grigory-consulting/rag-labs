@@ -1,13 +1,33 @@
-# Abhängigkeiten für die common/-Engine und lab01.
-# Installieren:  pip install -r requirements.txt
-
+# Notebooks
+jupyterlab>=4.2,<5
 ipykernel>=6.29
 
-# Retrieval + Vektoren
-numpy>=1.26,<3
-rank-bm25>=0.2.2
-
-# Embeddings: lokal (Default) und OpenAI
-sentence-transformers>=3.2,<4
-openai>=1.52,<2
+# LLM-Backends
+openai>=1.52,<2          
 python-dotenv>=1.0
+
+# Embeddings (immer lokal)
+sentence-transformers>=3.2,<4
+tiktoken>=0.8
+
+# Retrieval / Index
+rank-bm25>=0.2.2
+chromadb>=0.5.15,<0.6
+
+# IR-Metriken + Eval-Datensaetze
+ranx>=0.3.20
+beir>=2.0.0
+datasets>=3.0
+
+# Chunking
+langchain-text-splitters>=0.3
+
+# Drift / Monitoring
+evidently>=0.4.33
+
+# Analyse & Plots
+numpy>=1.26,<3
+pandas>=2.2
+scikit-learn>=1.5
+matplotlib>=3.9
+seaborn>=0.13
